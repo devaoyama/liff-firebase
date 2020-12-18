@@ -1,6 +1,6 @@
 module.exports = {
     env: {
-        // LIFF_ID: process.env.LIFF_ID,
+        LIFF_ID: process.env.LIFF_ID,
         FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
         FIREBASE_AUTH_DOMAIN: process.env.FIREBASE_AUTH_DOMAIN,
         FIREBASE_DATABASE_URL: process.env.FIREBASE_DATABASE_URL,

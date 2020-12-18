@@ -8,7 +8,12 @@ const Index = () => {
     return (
         <React.Fragment>
             <div>Hello, Nextjs!</div>
-            {currentUser ? <div>ログイン済み</div> : (
+            {currentUser ? (
+                <div>
+                    <p>ログイン済み</p>
+                    <p>ユーザーID： {currentUser.uid}</p>
+                </div>
+            ) : (
                 <div>
                     ログインしていません
                     <Link href="/login">ログイン</Link>
