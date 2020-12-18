@@ -1,14 +1,17 @@
 import React from "react";
 import LiffInit from "../components/LiffInit";
+import Auth from "../contexts/Auth";
 
 const App = ({ Component, pageProps }) => {
     return (
         <React.Fragment>
             <LiffInit>
-                <Component {...pageProps} />
+                <Auth>
+                    <Component {...pageProps} />
+                </Auth>
             </LiffInit>
         </React.Fragment>
     );
-}
+};
 
 export default App;

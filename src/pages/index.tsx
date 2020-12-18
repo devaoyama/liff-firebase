@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 const Index = () => {
     const [isLogin, setLogin] = useState(false);
@@ -10,7 +11,12 @@ const Index = () => {
     return (
         <React.Fragment>
             <div>Hello, Nextjs!</div>
-            {isLogin ? <div>ログイン済み</div> : <div>ログインしていません</div>}
+            {isLogin ? <div>ログイン済み</div> : (
+                <div>
+                    ログインしていません
+                    <Link href="/login">ログイン</Link>
+                </div>
+            )}
         </React.Fragment>
     );
 };
