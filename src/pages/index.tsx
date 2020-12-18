@@ -1,17 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
+import { AuthContext } from "../contexts/Auth";
 
 const Index = () => {
-    const [isLogin, setLogin] = useState(false);
-
-    useEffect(() => {
-        setLogin(liff.isLoggedIn());
-    });
+    const currentUser = useContext(AuthContext);
 
     return (
         <React.Fragment>
             <div>Hello, Nextjs!</div>
-            {isLogin ? <div>ログイン済み</div> : (
+            {currentUser ? <div>ログイン済み</div> : (
                 <div>
                     ログインしていません
                     <Link href="/login">ログイン</Link>
