@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import Link from "next/link";
 import { AuthContext } from "../contexts/Auth";
 
 const Index = () => {
@@ -8,17 +7,10 @@ const Index = () => {
     return (
         <React.Fragment>
             <div>Hello, Nextjs!</div>
-            {currentUser ? (
-                <div>
-                    <p>ログイン済み</p>
-                    <p>ユーザーID： {currentUser.uid}</p>
-                </div>
-            ) : (
-                <div>
-                    ログインしていません
-                    <Link href="/login">ログイン</Link>
-                </div>
-            )}
+            <div>
+                <p>ログイン済み</p>
+                <p>ユーザーID： {currentUser.uid}</p>
+            </div>
         </React.Fragment>
     );
 };
