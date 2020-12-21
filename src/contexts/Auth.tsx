@@ -29,7 +29,6 @@ const Auth = ({ children }) => {
                     }),
                 }).then(response => {
                     response.text().then(data => {
-                        console.log(data);
                         auth.signInWithCustomToken(data).then(response => {
                             const user = response.user;
                             setCurrentUser(user);
