@@ -25,7 +25,7 @@ const Auth = ({ children }) => {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        accessToken: liff.getAccessToken(),
+                        idToken: liff.getIDToken(),
                     }),
                 }).then(response => {
                     response.text().then(data => {
