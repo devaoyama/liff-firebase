@@ -1,17 +1,8 @@
-import React from "react";
-import LiffInit from "../components/LiffInit";
-import Auth from "../contexts/Auth";
+import '../styles/globals.css'
+import type { AppProps } from 'next/app'
 
-const App = ({ Component, pageProps }) => {
-    return (
-        <React.Fragment>
-            <LiffInit>
-                <Auth>
-                    <Component {...pageProps} />
-                </Auth>
-            </LiffInit>
-        </React.Fragment>
-    );
-};
+function MyApp({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />
+}
 
-export default App;
+export default MyApp
