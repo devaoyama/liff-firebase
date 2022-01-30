@@ -3,17 +3,17 @@ import Router from "next/router";
 import { PageProps } from "./_app";
 import styles from "../styles/Home.module.css";
 
-const Home: NextPage<PageProps> = (props) => {
-  if (!props.isLoggedIn) {
-    Router.push("/login");
+const Login: NextPage<PageProps> = (props) => {
+  if (props.isLoggedIn) {
+    Router.push("/");
     return <div>Loading</div>;
   }
   return (
     <div className={styles.container}>
-      <p>ログインしています</p>
-      <button onClick={() => props.logout()}>ログアウト</button>
+      <p>ログインしていません</p>
+      <button onClick={() => props.liff.login()}>ログイン</button>
     </div>
   );
 };
 
-export default Home;
+export default Login;
